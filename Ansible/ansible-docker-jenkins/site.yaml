@@ -1,0 +1,13 @@
+---
+- hosts: jenkins
+  connection: local
+  become: True
+
+  vars_files:
+    #- 'local_settings.yml'
+    - './vars/users.yaml'
+
+  roles:
+    - role: jenkins
+      
+   
